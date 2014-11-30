@@ -1,0 +1,172 @@
+<html lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+    <head>
+    <meta http-equiv="Content-type" content="small-module-text/html" charset="utf-8">
+    <title>Motion - Capture Moments. Together.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Motion">
+    <meta name="description" content="Capture Moments. Together.">
+    <meta name="author" content="Peter Kim">
+
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/animations.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+
+    <meta property="og:title" content="Motion" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="Capture Moments. Together." />
+
+    </head>
+
+    <body>
+
+    <nav id="navigation">
+      <div class="motion-logo-wrapper">
+        <a class="motion-logo" href="/">
+        </a>
+      </div>
+      <ul>
+        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="#mission">Mission</a></li>
+        <li class="nav-item"><a href="#capture">Capture</a></li>
+      </ul>
+    </nav>
+
+        <article id="intro" style="width: 100%; height: 100%"
+        data-vide-bg="assets/vid/background_sample" data-vide-options="loop: false, muted: false, position: 0% 0%">
+            <div class="logo fadeIn">
+                <h1>Motion</h1>
+                <h2>Capture Moments. Together.</h2>
+            </div>
+
+            <a href="#mission" class="next-arrow">
+                <div class="triangle floating"></div>
+            </a>
+        </article>
+
+        <article id="mission">
+            <section class="article-part">
+                <div class="left">
+                    <div class="text">
+                        <h1 class="section-header">Seamless Collaboration</h1>
+                        <p class="section-paragraph">Moments are automatically stitched to form beautiful and evolving stories.</p>
+                </div>
+              </div>
+              <div class="right">
+                <img src="assets/img/iphone5s.png" class="image-1">
+            </div>
+            </section>
+
+
+            <section class="article-part section-2">
+                <div class="left">
+                    <img src="assets/img/iphone5s.png" class="image-2">
+                </div>
+                <div class="right">
+                    <div class="text">
+                        <h1 class="section-header">Painless Recording</h1>
+                        <p class="section-paragraph">Capture moments with a touch of a button.</p>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+        <article id="capture">
+            <div class="imagery">
+                <img src="assets/img/iphone5s.png" class="image-3">
+            </div>
+            <a href="/" class="try-now">Try Now</a>
+            <p>"The aim of every artist is to arrest motion."</p>
+        </article>
+
+        <article id="footer">
+            <a class="footer-logo" href="/">Motion</a>
+        </article>
+
+    <script src="assets/scripts/jquery-1.7.1.min.js"></script>
+    <script src="assets/scripts/jquery.vide.min.js"></script>
+    <script>
+        $(function() {
+          $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 500);
+                return false;
+              }
+            }
+          });
+        });
+
+        $(window).scroll(function() {
+            $('#navigation').each(function(){
+                var navPos = $(this).offset().top;
+                var topOfWindow = $(window).scrollTop();
+
+                if (topOfWindow < 100) {
+                    $(this).show(500, function(){});
+                } else if (topOfWindow > 100) {
+                    $(this).hide(500, function(){});
+                }
+            });
+
+            $('.image-1').each(function(){
+                var imagePos = $(this).offset().top;
+                var topOfWindow = $(window).scrollTop();
+
+                if (imagePos < topOfWindow+500) {
+                    $(this).addClass("slideLeft");
+                }
+            });
+
+            $('.image-2').each(function(){
+                var imagePos = $(this).offset().top;
+                var topOfWindow = $(window).scrollTop();
+
+                if (imagePos < topOfWindow+500) {
+                    $(this).addClass("slideRight");
+                }
+            });
+
+            $('.image-3').each(function(){
+                var imagePos = $(this).offset().top;
+                var topOfWindow = $(window).scrollTop();
+
+                if (imagePos < topOfWindow+500) {
+                    $(this).addClass("slideUp");
+                }
+            });
+        });
+
+        $('.try-now').hover(
+            function() {
+                $(this).addClass("pulse");
+                $(this).css('color', '#F56E5E');
+                $(this).css('border', '2px solid #F56E5E');
+            },
+            function() {
+                $(this).removeClass("pulse");
+                $(this).css('color', '#FFF');
+                $(this).css('border', '2px solid #FFFFFF');
+            }
+        );
+
+        $('#capture p').hover(
+            function() {
+                $(this).text('Made by Peter Kim and Kevin Chen @ Berkeley, CA');
+            },
+            function() {
+                $(this).text('"The aim of every artist is to arrest motion."');
+            }
+        );
+    </script>
+    </body>
+</html>

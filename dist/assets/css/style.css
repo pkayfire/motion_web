@@ -1,0 +1,293 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+iframe {
+  display: inline-block;
+  width: 560px; }
+
+body,
+html,
+#intro {
+  width: 100%;
+  height: 100%; 
+}
+
+#mission {
+  background: #F56E5E;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px; 
+} 
+
+#capture {
+  background: #5e9af5;
+  width: 100%;
+  height: 100%;
+  text-align: center; 
+}
+
+article {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: "Varela Round", sans-serif; }
+
+.logo {
+  position: relative;
+  top: 35%;
+  margin: 0 auto;
+  width: 100%;
+  visibility: hidden;}
+  .logo h1,
+  .logo h2 {
+    color: white;
+    text-align: center; }
+  .logo h1 {
+    font-size: 144px;
+    padding: 10px; }
+  .logo h2 {
+    font-size: 32px;
+    margin-top: 15px;
+    font-size: 17px; }
+
+.next-arrow {
+  bottom: 100px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  text-decoration: none; 
+}
+
+.triangle {
+  background: url("../img/triangle.png") center no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 94px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#navigation {
+  z-index: 1;
+  opacity: 1.0;
+  position: absolute;
+  top: 2.5em;
+  left: 60%;
+  width: 100%;
+  display: block;
+}
+
+#footer {
+  height: 150px;
+  width: 100%;
+  background: #42413E;
+  display:inline-block;
+}
+
+#footer-container {
+  display: inline;
+  margin-top: 30px;
+  text-align: right;
+}
+
+li {
+  display: inline-block;
+  margin: 0; 
+}
+
+li a {
+  display: block;
+  padding: 20px 30px;
+  line-height: 20px;
+  color: white; 
+}
+
+li.logo-nav {
+  margin-right: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none; 
+}
+
+li.logo-nav a {
+  text-decoration: none; 
+}
+
+li a {
+  font: normal 14px "Varela Round", sans-serif;
+  letter-spacing: 0.1em;
+  text-decoration: none; 
+}
+
+li a:hover {
+  color: #F56E5E; 
+}
+
+a.footer-logo {
+  color: #fff;
+  text-decoration: none; 
+  font-size: 40px;
+  margin-left: 100px;
+  margin-top: 55px;
+  display: inline-block;
+}
+
+a.try-now {
+  color: #fff;
+  text-decoration: none; 
+  font-size: 30px;
+  margin-top: 100px;
+  display: inline-block;
+  border-radius: 10px;
+  border: 2px solid #FFFFFF;
+  padding: 10px 25px;
+}
+
+#mission {
+  text-align: center; 
+}
+
+#mission img {
+  max-width: 100%;
+  display: inline-block; 
+}
+
+.left {
+  width: 50%; }
+
+.right {
+  width: 50%; }
+
+.text {
+  text-align: left;
+  width: 450px;
+  float: right;
+  padding: 25px 0; }
+
+.left,
+.right {
+  float: left; }
+
+.image-1 {
+  width: 30%;
+  margin-right: 250px;
+  visibility: hidden;
+}
+
+.image-2 {
+  width: 30%; 
+  margin-left: 250px;
+  visibility: hidden;
+}
+
+.image-3 {
+  margin-top: 60px;
+  width: 20%;
+  visibility: hidden;
+}
+
+.article-part {
+  overflow: hidden;
+}
+
+.article-part.section-2 {
+  margin-top: 50px; 
+}
+
+.article-part.section-2 .left {
+  margin-right: 2%;
+  width: 48%; 
+}
+
+.article-part.section-2 .right {
+  width: 50%;
+  margin-left: 0; 
+}
+
+.article-part.section-2 .text {
+  float: left; 
+}
+
+.section-subheader {
+  color: #fff;
+  font-size: 30px;
+}
+
+.section-paragraph {
+  font-size: 18px;
+  font-weight: lighter;
+  line-height: 28px;
+  color: #fff; }
+
+.section-header {
+  color: #fff;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 40px; }
+
+.centered-image {
+  display: inline-block;
+  width: 300px; }
+
+#capture p {
+  color: #fff;
+  text-decoration: none; 
+  font-size: 12px;
+  margin-top: 125px;
+}
